@@ -1,0 +1,146 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+    background-image: url("images/backlogin.png");
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-attachment: fixed;
+  }
+  
+  .login-container {
+    text-align: center;
+  }
+  
+  .login-box {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    width: 300px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .login-box:hover {
+    transform: scale(1.05);
+  }
+  
+  .logo {
+    max-width: 100px;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    color: #677B5E;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  input {
+    padding: 12px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  input:hover,
+  input:focus {
+    border-color: #677B5E;
+    box-shadow: 0 0 5px rgba(27, 88, 33, 0.7);
+  }
+  
+  .remember-me {
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+    font-size: 14px;
+  }
+  
+  .remember-me input {
+    margin-right: 5px;
+    margin-top: 28px;
+    color: #677B5E;
+  }
+  
+  button {
+    background-color: #677B5E;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #BC9C22;
+  }
+  
+  .error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 15px;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .signup-link {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  a {
+    color: #677B5E;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  a:hover {
+    color: #BC9C22;
+  }
+  
+  select {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  select:hover,
+  select:focus {
+    border-color: #1da1f2;
+  }
+  
+  /* Additional styling for the error message */
+  .error-message {
+    color: #ff3333;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Additional hover effect for error message */
+  .signup-box:hover .error-message {
+    opacity: 0.7;
+  }

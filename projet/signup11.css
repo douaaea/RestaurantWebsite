@@ -1,0 +1,121 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("images/backlogin.png");
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-attachment: fixed;
+  }
+  
+  .signup-container {
+    text-align: center;
+  }
+  
+  .signup-box {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .signup-box:hover {
+    transform: scale(1.05);
+  }
+  
+  h1 {
+    color: #677B5E;
+    font-size: 24px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  input {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+  }
+  
+  input:hover,
+  input:focus {
+    border-color: #BC9C22;
+    border-radius: 10px;
+  }
+  
+  button {
+    background-color: #677B5E;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #BC9C22;
+  }
+  
+  .login-link {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  a {
+    color: #677B5E;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+    color: #BC9C22;
+  }
+  
+  /* Existing CSS rules */
+
+select {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  select:hover,
+  select:focus {
+    border-color: #1da1f2;
+  }
+  
+  /* Additional styling for the error message */
+  .error-message {
+    color: #ff3333;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Additional hover effect for error message */
+  .signup-box:hover .error-message {
+    opacity: 0.7;
+  }

@@ -19,8 +19,13 @@ $connection->selectDatabase('dorsiaDB1');
   $declarations = Declaration::selectAllDeclarations('Declarations',$connection->conn);
 
   if(isset($_POST['submit'])){
-    $declarations = Declaration::selectDeclarationByRestaurantId('Declarations',$connection->conn,$_POST['restaurant']);
+    $clients = Client::selectClientByCityId('Clients',$connection->conn,$_POST['restaurant']);
+    foreach($clients as $client) {
+    
+        $declarations = Declaration::selectDeclarationByClientId('Declarations',$connection->conn,$client['id']);
 
+     }
+    
   }
 ?>
 
@@ -43,19 +48,19 @@ $connection->selectDatabase('dorsiaDB1');
         <nav>
             <div class="nav-links">
                 <ul>
-                    <li><a href="formworkers.html">WORKERS</a></li>
-                    <li><a href="Listofworkers.html">DATA</a></li>
-                    <li><a href="formclients.html">CLIENTS</a></li>
-                    <li><a href="reservationManagement.html">RESERVATIONS</a></li>
-                    <li><a href="supportmanagement.html">SUPPORT</a></li>
-                    <li><a href="employeelogin.html">LOG OUT</a></li>
+                <li><a href="createWorker.php">WORKERS</a></li>
+                    <li><a href="readWorker.php">DATA</a></li>
+                    <li><a href="readClient.php">CLIENTS</a></li>
+                    <li><a href="readRes.php">RESERVATIONS</a></li>
+                    <li><a href="readDec.php">SUPPORT</a></li>
+                    <li><a href="loginWorker.php">LOG OUT</a></li>
                 </ul>
             </div>
         </nav>
     </section>
 <h3>Clients Requests and Messages </h3>
 </div>
-
+<form method="post">
 <div class="search-box-container">
     <i class="fas fa-search search-icon"></i>
     <select class="search-box" id="searchByRestaurant" name="restaurant">
@@ -71,6 +76,7 @@ $connection->selectDatabase('dorsiaDB1');
     </select>
     <button class="search-button" type="submit" name="submit">Search</button>
 </div>
+                    </form>
 <table class="table" id="table">
     <thead>
         <tr> 

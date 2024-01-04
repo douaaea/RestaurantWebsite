@@ -34,7 +34,7 @@ public function insertDeclaration($tableName,$conn){
 $sql = "INSERT INTO $tableName (name, phone, email,subject,message,idClient)
 VALUES ('$this->name', '$this->phone', '$this->email','$this->subject','$this->message','$this->idClient')";
 if (mysqli_query($conn, $sql)) {
-self::$successMsg= "New record created successfully";
+self::$successMsg= "Thank You for Reaching Out!";
 
 } else {
     self::$errorMsg ="Error: " . $sql . "<br>" . mysqli_error($conn);
@@ -87,10 +87,8 @@ if (mysqli_query($conn, $sql)) {
 
   
     }
-
-
-    public static function selectDeclarationByRestaurantId($tableName,$conn,$idClient){
-    
+    static function selectDeclarationByClientId($tableName,$conn,$idClient){
+        //select a declaration by id, and return the row result
         $sql = "SELECT id,name, phone,email,subject,message,idClient FROM $tableName  WHERE idClient='$idClient'";
         $result = mysqli_query($conn, $sql);
         if (mysqli_num_rows($result) > 0) {
@@ -102,9 +100,11 @@ if (mysqli_query($conn, $sql)) {
         }
         return $data;
     }
-
     }
 
+
+
+   
 }
 
 ?>

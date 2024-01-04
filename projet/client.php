@@ -33,7 +33,7 @@ public function insertClient($tableName,$conn){
 $sql = "INSERT INTO $tableName (firstname, lastname, email,password,reg_date,idCity)
 VALUES ('$this->firstname', '$this->lastname', '$this->email','$this->password','$this->reg_date','$this->idCity')";
 if (mysqli_query($conn, $sql)) {
-self::$successMsg= "New record created successfully";
+self::$successMsg= "Welcome to our family";
 
 } else {
     self::$errorMsg ="Error: " . $sql . "<br>" . mysqli_error($conn);
@@ -105,6 +105,7 @@ if (mysqli_query($conn, $sql)) {
     
         $sql = "SELECT id, firstname, lastname,email,password,reg_date,idCity FROM $tableName  WHERE idCity='$idCity'";
         $result = mysqli_query($conn, $sql);
+        
         if (mysqli_num_rows($result) > 0) {
         // output data of each row
         $data=[];
@@ -113,6 +114,7 @@ if (mysqli_query($conn, $sql)) {
             $data[]=$row;
         }
         return $data;
+     
     }
 
 
@@ -142,5 +144,9 @@ if (mysqli_query($conn, $sql)) {
 }
 
 }
+
+
+
+
 
 ?>

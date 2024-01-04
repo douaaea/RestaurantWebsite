@@ -73,12 +73,12 @@ $messageValue = "";
           
           <div class="nav-links">
             <ul>
-                <li><a href="mainPage.html">HOME</a></li>
-                <li><a href="AboutUs.html">ABOUT US</a></li>
-                <li><a href="reserD.html">RESERVATIONS</a></li>
-                <li><a href="menuD.html">MENU</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-                <li><a href="page1.html">LOG OUT</a></li>
+                <li><a href="mainPage.php">HOME</a></li>
+                <li><a href="AboutUs.php">ABOUT US</a></li>
+                <li><a href="createRes.php">RESERVATIONS</a></li>
+                <li><a href="menu.php">MENU</a></li>
+                <li><a href="createDec.php">CONTACT</a></li>
+                <li><a href="loginClient.php">LOG OUT</a></li>
             </ul>
           </div>
         </nav>

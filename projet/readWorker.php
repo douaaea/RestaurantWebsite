@@ -19,16 +19,15 @@ $connection->selectDatabase('dorsiaDB1');
  
   //call the static selectAllClients method and store the result of the method in $clients
   $workers = Worker::selectAllWorkers('Workers',$connection->conn);
-
-  if(isset($_POST['submit1'])){
+  if(isset($_POST['submit2'])){
     $workers = Worker::selectWorkerByCityId('Workers',$connection->conn,$_POST['city']);
 
   }
-  else if(isset($_POST['submit2'])){
+  else if(isset($_POST['submit3'])){
     $workers = Worker::selectWorkersByRestaurantId('Workers',$connection->conn,$_POST['restaurant']);
 
   }
-   else if(isset($_POST['submit3'])){
+   else if(isset($_POST['submit4'])){
     $workers = Worker::selectWorkerByOccupation('Workers',$connection->conn,$_POST['occupation']);
 
   }
@@ -53,23 +52,19 @@ $connection->selectDatabase('dorsiaDB1');
         <nav>
             <div class="nav-links">
                 <ul>
-                    <li><a href="formworkers.html">WORKERS</a></li>
-                    <li><a href="Listofworkers.html">DATA</a></li>
-                    <li><a href="formclients.html">CLIENTS</a></li>
-                    <li><a href="reservationManagement.html">RESERVATIONS</a></li>
-                    <li><a href="contact.html">SUPPORT</a></li>
-                    <li><a href="employeelogin.html">LOG OUT</a></li>
+                <li><a href="createWorker.php">WORKERS</a></li>
+                    <li><a href="readWorker.php">DATA</a></li>
+                    <li><a href="readClient.php">CLIENTS</a></li>
+                    <li><a href="readRes.php">RESERVATIONS</a></li>
+                    <li><a href="readDec.php">SUPPORT</a></li>
+                    <li><a href="loginWorker.php">LOG OUT</a></li>
                 </ul>
             </div>
         </nav>
     </section>
 <h3>List of workers from database </h3>
+<form method="post">
 <div class="search-container">
-    <div class="search-box-container">
-        <i class="fas fa-search search-icon"></i>
-        <input type="text" class="search-box" id="searchById" placeholder="Search by ID" name="ids">
-        <button class="search-button" type="submit" name="submit1">Search</button>
-    </div>
     <div class="search-box-container">
         <i class="fas fa-search search-icon"></i>
         <select class="search-box" id="searchByCity" name="city">
@@ -117,6 +112,7 @@ $connection->selectDatabase('dorsiaDB1');
 </div>
 
 </div>
+                    </form>
 <table class="table" id="table">
     <thead>
         <tr> 

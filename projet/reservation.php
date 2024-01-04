@@ -32,7 +32,7 @@ public function insertReservation($tableName,$conn){
 $sql = "INSERT INTO $tableName (resday, reshour, fullname, phone, idClient)
 VALUES ('$this->resday', '$this->reshour', '$this->fullname','$this->phone','$this->idClient')";
 if (mysqli_query($conn, $sql)) {
-self::$successMsg= "New record created successfully";
+self::$successMsg= "Thank you for choosing Dorsia";
 
 } else {
     self::$errorMsg ="Error: " . $sql . "<br>" . mysqli_error($conn);

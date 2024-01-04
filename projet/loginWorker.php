@@ -54,7 +54,7 @@ if(isset($_POST["submit"])){
 
   <div class="login-container">
     <div class="login-box">
-      <img src="logopng.png" alt="logopng" class="logo">
+      <img src="images\logopng.png" alt="logopng" class="logo">
       <h1>Employee Login</h1>
       <form id="login-form"  method="post">
         <label for="employeeId">Employee ID:</label>

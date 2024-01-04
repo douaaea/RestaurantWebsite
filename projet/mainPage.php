@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dorsia</title>
   <link rel="stylesheet" href="styleMain.css">
-  <link rel="icon" href="images/logo3.png" />
+  <link rel="icon" href="images/logo3.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -15,19 +15,19 @@
     
     <div class="nav-links">
       <ul>
-        <li><a href="mainPage.php">HOME</a></li>
-        <li><a href="AboutUs.html">ABOUT US</a></li>
-        <li><a href="createRes.php">RESERVATIONS</a></li>
-        <li><a href="menuD.html">MENU</a></li>
-        <li><a href="createDec.php">CONTACT</a></li>
-        <li><a href="createclient.php">LOG OUT</a></li>
+      <li><a href="mainPage.php">HOME</a></li>
+                <li><a href="AboutUs.php">ABOUT US</a></li>
+                <li><a href="createRes.php">RESERVATIONS</a></li>
+                <li><a href="menu.php">MENU</a></li>
+                <li><a href="createDec.php">CONTACT</a></li>
+                <li><a href="loginClient.php">LOG OUT</a></li>
       </ul>
     </div>
   </nav>
 <div class="text-box">
   <h1>DORSIA EXPERIENCE</h1>
   <p> STEP INTO A 3 MICHELIN STARS WORLD OF LUXURY</p>
-  <a href="reserD.html" class="hero-btn">MAKE A RESERVATION</a>
+  <a href="createRes.php" class="hero-btn">MAKE A RESERVATION</a>
 </div>
 </section>
  
@@ -113,7 +113,7 @@
  
 <section class="menu">
   <h1>At the Michelin-starred Dorsia Restaurant<br>we offer a truly remarkable dining experience often described as truly stunning.</h1>
-  <a href="menuD.html" class="hero-btn">CHECK OUR MENU</a>
+  <a href="menu.php" class="hero-btn">CHECK OUR MENU</a>
 
 </section>
  <section class="footer">

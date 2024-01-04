@@ -17,9 +17,9 @@ $connection->selectDatabase('dorsiaDB1');
  
   //call the static selectAllClients method and store the result of the method in $clients
   $clients = Client::selectAllClients('Clients',$connection->conn);
-
+ 
   if(isset($_POST['submit'])){
-    $clients = Client::selectClientByCityId('Clients',$connection->conn,$_POST['cities']);
+   $clients = Client::selectClientByCityId('Clients',$connection->conn,$_POST['cities']);
    
   }
 ?>
@@ -35,7 +35,7 @@ $connection->selectDatabase('dorsiaDB1');
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="forms.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-3S9AojtYehBATPwj1rYStCVvz9bhKDopz4K0r53LxtsIw9d1GhFVBLLOyev7CAfa" crossorigin="anonymous">
-    <link rel="icon" href="images/logo3.png" />
+    <link rel="icon" href="images/logo3.png" type="image/png">
 </head>
 <body>
     
@@ -44,18 +44,19 @@ $connection->selectDatabase('dorsiaDB1');
         <nav>
             <div class="nav-links">
                 <ul>
-                    <li><a href="formworkers.html">WORKERS</a></li>
-                    <li><a href="Listofworkers.html">DATA</a></li>
-                    <li><a href="formclients.html">CLIENTS</a></li>
-                    <li><a href="reservationManagement.html">RESERVATIONS</a></li>
-                    <li><a href="contact.html">SUPPORT</a></li>
-                    <li><a href="employeelogin.html">LOG OUT</a></li>
+                <li><a href="createWorker.php">WORKERS</a></li>
+                    <li><a href="readWorker.php">DATA</a></li>
+                    <li><a href="readClient.php">CLIENTS</a></li>
+                    <li><a href="readRes.php">RESERVATIONS</a></li>
+                    <li><a href="readDec.php">SUPPORT</a></li>
+                    <li><a href="loginWorker.php">LOG OUT</a></li>
                 </ul>
             </div>
         </nav>
     </section>
 
         <h3>List of clients from database </h3>
+        <form method="post">
         <div class="search-container">
             <div class="search-box-container">
                 <i class="fas fa-search search-icon"></i>
@@ -75,6 +76,7 @@ $connection->selectDatabase('dorsiaDB1');
         </div>
     
         </div>
+                    </form>
         <table class="table" id="table">
             <thead>
                 <tr> 
@@ -118,5 +120,6 @@ foreach($clients as $row) {
 </tbody>
         </table>
     </div>
+
 </body>
 </html>

@@ -104,7 +104,7 @@ if (mysqli_query($conn, $sql)) {
 
     public static function selectWorkerByCityId($tableName,$conn,$idCity){
     
-        $sql = "SELECT id, firstname, lastname,idOccupation,idCity,idRestaurant FROM $tableName  WHERE idCity='$idCity'";
+        $sql = "SELECT id, firstname, lastname,reg_date,idOccupation,idCity,idRestaurant FROM $tableName  WHERE idCity='$idCity'";
         $result = mysqli_query($conn, $sql);
         if (mysqli_num_rows($result) > 0) {
         // output data of each row
@@ -119,7 +119,7 @@ if (mysqli_query($conn, $sql)) {
     }
     public static function selectWorkersByRestaurantId($tableName,$conn,$idRestaurant){
     
-        $sql = "SELECT id, firstname, lastname,idOccupation,idCity,idRestaurant FROM $tableName  WHERE idRestaurant='$idRestaurant'";
+        $sql = "SELECT id, firstname, lastname,reg_date,idOccupation,idCity,idRestaurant FROM $tableName  WHERE idRestaurant='$idRestaurant'";
         $result = mysqli_query($conn, $sql);
         if (mysqli_num_rows($result) > 0) {
         // output data of each row
@@ -135,7 +135,7 @@ if (mysqli_query($conn, $sql)) {
 
     public static function selectWorkerByOccupation($tableName,$conn,$idOccupation){
     
-        $sql = "SELECT id, firstname, lastname,idOccupation,idCity,idRestaurant FROM $tableName  WHERE idOccupation='$idOccupation'";
+        $sql = "SELECT id, firstname, lastname,reg_date,idOccupation,idCity,idRestaurant FROM $tableName  WHERE idOccupation='$idOccupation'";
         $result = mysqli_query($conn, $sql);
         if (mysqli_num_rows($result) > 0) {
         // output data of each row
